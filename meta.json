@@ -40,5 +40,6 @@
             "title":"Author URl"
         }
     ],
+    "icon": "bitbucket",
     "title": "Bitbucket Approve Pull Requests" /* Required.A display name for the module */
 }
