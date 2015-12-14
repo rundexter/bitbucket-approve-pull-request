@@ -60,10 +60,10 @@ module.exports = {
             this.fail('A [bitbucket_username, bitbucket_password] environment need for this module.');
         }
 
-        if (!step.input('owner').first() || !step.input('repo_slug').first()) {
+        if (!step.input('owner').first() || !step.input('repo_slug').first() || !step.input('id').first()) {
 
             result = false;
-            this.fail('A [owner, repo_slug, revision] inputs need for this module.');
+            this.fail('A [owner, repo_slug, id] inputs need for this module.');
         }
 
         return result;
@@ -76,16 +76,15 @@ module.exports = {
      * @param {AppData} dexter Container for all data used in this workflow.
      */
     run: function(step, dexter) {
-
-        var auth = this.authParams(dexter),
-            requestId = step.input('id').first(),
-            owner = step.input('owner').first(),
-            repo_slug = step.input('repo_slug').first();
-
-        var uriLink = 'repositories/' + owner + '/' + repo_slug + '/pullrequests/' + requestId + '/approve';
-
+        var auth = this.authParams(dexter);
         // check params.
         if (!this.checkCorrectParams(auth, step)) return;
+
+        var requestId = step.input('id').first(),
+            owner = step.input('owner').first().trim(),
+            repo_slug = step.input('repo_slug').first().trim();
+
+        var uriLink = 'repositories/' + owner + '/' + repo_slug + '/pullrequests/' + requestId + '/approve';
         //send API request
         request.post({url: uriLink, auth: auth, json: true}, function (error, responce, body) {
             console.log(body);
