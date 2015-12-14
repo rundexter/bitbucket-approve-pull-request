@@ -4,23 +4,41 @@
 {
     //Required. Inputs the module expects.
     "inputs": [
-        //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "id",
+            "title":"ID request"
+        },
+        {
+            "id": "owner",
+            "title":"Owner"
+        },
+        {
+            "id": "repo_slug",
+            "title":"Repo Slug"
         }
-        */
     ],
     //Required. Outputs the module emits.
     "outputs": [
-      //e.g.
-      /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "user_uuid",
+            "title":"User uuid"
+        },
+        {
+            "id": "role",
+            "title":"ROLE"
+        },
+        {
+            "id": "user_username",
+            "title":"Author Username"
+        },
+        {
+            "id": "user_display_name",
+            "title":"Author Name"
+        },
+        {
+            "id": "user_url",
+            "title":"Author URl"
         }
-      */
     ],
     "title": "Bitbucket Approve Pull Requests" /* Required.A display name for the module */
 }
