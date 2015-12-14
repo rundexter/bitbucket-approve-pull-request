@@ -87,7 +87,7 @@ module.exports = {
         var uriLink = 'repositories/' + owner + '/' + repo_slug + '/pullrequests/' + requestId + '/approve';
         //send API request
         request.post({url: uriLink, auth: auth, json: true}, function (error, responce, body) {
-            console.log(body);
+
             this.processResult(error, responce, body);
         }.bind(this));
     }
