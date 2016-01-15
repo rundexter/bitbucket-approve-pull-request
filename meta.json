@@ -40,6 +40,9 @@
             "title":"Author URl"
         }
     ],
+    "providers": [{
+        "name": "bitbucket"
+    }],
     "icon": "bitbucket",
     "title": "Bitbucket Approve Pull Requests" /* Required.A display name for the module */
 }
