@@ -67,8 +67,8 @@ module.exports = _.merge({
         //description / Description
         //scm / SCM
                 //Replace VAR1 with the name of an expected input, and add more inputs as needed.
-                owner: 'owner',
-                repo_slug: 'dexter-twitter-follow',
+                owner: 'zaretskii',
+                repo_slug: 'name-3',
                 id: '1'
             }
         }
