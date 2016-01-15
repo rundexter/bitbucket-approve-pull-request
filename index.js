@@ -17,14 +17,6 @@ var pickInputs = {
         'user_url': 'user.links.self.href',
         'approved': 'isApproved'
     };
-var globalPickResult = {
-    'user_uuid': 'user.uuid',
-    'role': 'role',
-    'user_username': 'user.username',
-    'user_display_name': 'user.display_name',
-    'user_url': 'user.links.self.href',
-    'approved': 'isApproved'
-};
 
 module.exports = {
     /**
